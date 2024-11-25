@@ -34,12 +34,16 @@ while True:
                     aprobados.append(nif)
                 else:
                     dato_alumno[i] = False
-        alumnos[0][nif] = dato_alumno
+        (alumnos[0])[nif] = dato_alumno
+        print(alumnos)
         print("***AÑADIDO***")
     if menu == "2":
         print("***Eliminar alumno/a***")
         nif = input("Dime el NIF que quieres borrar: ")
-        alumnos[0].pop(nif)
+        if nif in alumnos[0]:
+            (alumnos[0]).pop(nif)
+        else:
+            print("El NIF no se encuentra en la base de datos")
     if menu == "3":
         print("***Mostrar alumno/a***")
         nif = input("Dime el NIF que quieres mostrar: ")
