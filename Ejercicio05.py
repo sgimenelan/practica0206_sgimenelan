@@ -12,7 +12,7 @@ while palabras != "terminar":
     if palabras == "terminar":
         break
     else:
-        for i in palabras.split(','):
+        for i in palabras.split(', '):
             clave, valor = i.split(':')
             traduccion[clave] = valor
 frase = input("Introduce la frase en español: ")
